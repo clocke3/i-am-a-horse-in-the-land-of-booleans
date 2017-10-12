@@ -1,7 +1,7 @@
 (ns i-am-a-horse-in-the-land-of-booleans
   (:refer-clojure :exclude [boolean]))
 
-(defn bool [x]
+(defn boolean [x]
   (if(or (= x nil) (= x false))
   false
   true))
@@ -18,19 +18,19 @@
 
 (defn fizzbuzz [n]
   (cond
-    (divides? 15 n)  "gotcha"
+    (divides? 15 n)  "gotcha!"
     (divides? 5 n) "buzz"
     (divides? 3 n) "fizz"
     :else   ""))
 
 (defn teen? [age]
-  (if(< 13 age 18)
+  (if(< 12 age 20)
   true
   false))
 
 (defn not-teen? [age]
   (cond
-  (or (< age 13) (> age 17)) true
+  (or (< age 13) (> age 19)) true
    :else false))
 
 (defn generic-doublificate [x]
